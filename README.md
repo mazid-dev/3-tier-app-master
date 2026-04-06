@@ -1,10 +1,10 @@
-# 🌐 3-Tier Application Deployment on AWS EC2 (Manual Setup)
+# 3-Tier Application Deployment on AWS EC2 (Manual Setup)
 
 This project demonstrates the manual deployment of a production-ready **3-Tier Architecture** on a single **AWS EC2 (Ubuntu 22.04 LTS)** instance. It covers everything from Database configuration to Nginx Reverse Proxy setup.
 
 ---
 
-## 🏗️ Architecture Breakdown
+## Architecture Breakdown
 1. **Frontend Layer:** React.js application served as static files by Nginx.
 2. **Backend Layer:** Node.js API managed by **PM2** for process persistence.
 3. **Database Layer:** MongoDB (NoSQL) installed locally on the EC2 instance.
@@ -14,7 +14,7 @@ This project demonstrates the manual deployment of a production-ready **3-Tier A
 
 ---
 
-## 🚀 Step-by-Step Implementation
+## Step-by-Step Implementation
 
 ### Phase 1: Database & Backend Setup
 - **System Update:** Initialized the environment using `sudo apt update && sudo apt upgrade -y`.
@@ -40,12 +40,5 @@ This project demonstrates the manual deployment of a production-ready **3-Tier A
 - **Web Networking:** Configuring **Nginx** as a Reverse Proxy to solve CORS issues and secure the backend.
 - **Cloud Infrastructure:** Managing AWS Security Groups (Port 80, 22, 443).
 
----
 
-## 🔍 Verification Commands
-- Check Services: `systemctl status nginx` & `pm2 list`
-- Monitor Logs: `pm2 logs` & `tail -f /var/log/nginx/error.log`
-- API Health: `curl http://localhost:5000/api/health`
-
----
 **Developed by:** [Mazid Hossain](https://www.linkedin.com/in/md-mazid-hossain-293561227/)
